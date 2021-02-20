@@ -3,6 +3,7 @@ output_name: "2021-02-20"
 
 # fasta file to be analyzed
 fasta_file: "sub20k.fa"
+msa: "msa_25k.fasta"
 fasta_folder: "resources/genomes/2021-02-09"
 
 # number of sequence in the subset

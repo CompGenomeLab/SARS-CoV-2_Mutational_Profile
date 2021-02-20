@@ -9,7 +9,9 @@ rule all:
                 output_name=config["output_name"], 
                 cdhit=config["cdhit"]),
 
-include: "rules/filter_fasta.smk"
+include: "rules/gap_mut_calc.smk"
+include: "rules/get_headers.smk"
+include: "rules/filter_by_header.smk"
 include: "rules/subsample_fasta.smk"
 include: "rules/header_update.smk"
 include: "rules/metadata.smk"
