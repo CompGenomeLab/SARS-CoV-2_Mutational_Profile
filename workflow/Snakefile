@@ -1,0 +1,22 @@
+#!/bin/env python
+
+# configuration file
+configfile: "config/config.yaml"
+
+rule all:
+    input:
+        expand("results/{output_name}/{output_name}_{cdhit}_ancestral_sequences_muts.json", 
+                output_name=config["output_name"], 
+                cdhit=config["cdhit"]),
+
+include: "rules/filter_fasta.smk"
+include: "rules/subsample_fasta.smk"
+include: "rules/header_update.smk"
+include: "rules/metadata.smk"
+include: "rules/seq_filter.smk"
+include: "rules/cd_hit.smk"
+include: "rules/alignment.smk"
+include: "rules/tree.smk"
+include: "rules/define_root.smk"
+include: "rules/refine.smk"
+include: "rules/ancestral_tree.smk"
