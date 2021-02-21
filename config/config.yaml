@@ -1,13 +1,13 @@
 # name of the sequence data. Also used as folder name.
-output_name: "2021-02-20"
+output_name: "2021-02-09"
 
 # fasta file to be analyzed
-fasta_file: "sub20k.fa"
-msa: "msa_25k.fasta"
+fasta_file: "sequences_2021-02-09_08-13.fasta"
+msa: "msa_0210.fasta"
 fasta_folder: "resources/genomes/2021-02-09"
 
 # number of sequence in the subset
-subset: 5000
+subset: 30000
 
 # info file of the new sequences
 info_file: "metadata_2021-02-09_18-08.tsv"
@@ -16,21 +16,17 @@ info_folder: "resources/genomes/2021-02-09"
 # filter samples by time interval 
 time_window: "2019-01-01:2022-01-01"
 
-# True: do not add to existing alignment, make a new one from scratch.
-# False: add to the last produced alignment. 
-from_scratch: true
-
 # repeat the tree construction
 redo: true
 
 # reference fasta file
 reference_fa: "sars_cov_2_reference_genome.fa"
 
-# reference genbank file (used for rule translate)
-reference_gb: "sars_cov_2_reference_genome_MN985325.gb"
+# reference gff file
+reference_gff: "sars_cov_2_reference_genome.gff"
 
 # cdhit parameters
-cdhit: [0.99]
+cdhit: [0.99, 0.995, 0.999, 0.9999]
 
 
 
