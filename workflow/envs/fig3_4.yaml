@@ -1,0 +1,18 @@
+channels:
+  - conda-forge
+  - r
+  - defaults
+dependencies: 
+  - r-patchwork ==1.0
+  - r-forcats ==0.5.1
+  - r-argparser ==0.4
+  - r-stringr ==1.4.0
+  - r-stringi ==1.4.3
+  - r-bios2cor ==1.2
+  - r-reshape2 ==1.4.3
+  - r-rjson ==0.2.20
+  
+  
+  
+
+

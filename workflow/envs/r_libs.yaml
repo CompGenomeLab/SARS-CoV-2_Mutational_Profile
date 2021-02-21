@@ -1,7 +1,0 @@
-channels:
-  - r
-  - conda-forge
-dependencies:
-  - r-base ==3.6.1
-  - r-essentials ==3.6.0
-  - r-argparser ==0.6

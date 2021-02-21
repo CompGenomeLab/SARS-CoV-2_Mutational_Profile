@@ -9,8 +9,6 @@ rule get_headers:
         "logs/{output_name}/get_headers.log",
     benchmark:
         "logs/{output_name}/get_headers.benchmark.txt",
-    conda:
-        "../envs/r_libs.yaml",
     shell:
         """
         Rscript workflow/scripts/covid_sequence_filter.R \

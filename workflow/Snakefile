@@ -5,7 +5,19 @@ configfile: "config/config.yaml"
 
 rule all:
     input:
-        expand("results/{output_name}/{output_name}_{cdhit}_ancestral_sequences_muts.json", 
+        expand("results/{output_name}/{output_name}_{cdhit}_fig2a_mut_profiles.png", 
+                output_name=config["output_name"], 
+                cdhit=config["cdhit"]),
+        expand("results/{output_name}/{output_name}_{cdhit}_fig2b.png", 
+                output_name=config["output_name"], 
+                cdhit=config["cdhit"]),
+        expand("results/{output_name}/{output_name}_{cdhit}_fig2c.png", 
+                output_name=config["output_name"], 
+                cdhit=config["cdhit"]),
+        expand("results/{output_name}/{output_name}_{cdhit}_fig3.png", 
+                output_name=config["output_name"], 
+                cdhit=config["cdhit"]),
+        expand("results/{output_name}/{output_name}_{cdhit}_fig4.png", 
                 output_name=config["output_name"], 
                 cdhit=config["cdhit"]),
 
@@ -22,3 +34,10 @@ include: "rules/tree.smk"
 include: "rules/define_root.smk"
 include: "rules/refine.smk"
 include: "rules/ancestral_tree.smk"
+include: "rules/signature_calc.smk"
+include: "rules/percentage_calc.smk"
+include: "rules/trinuc_norm.smk"
+include: "rules/fig2a.smk"
+include: "rules/fig2bc.smk"
+include: "rules/fig3ab.smk"
+include: "rules/fig4ab.smk"
