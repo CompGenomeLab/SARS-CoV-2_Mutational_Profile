@@ -227,7 +227,7 @@ ax <- list(
   gridwidth = .5,
   title = "Normalized Mutation Counts",
   titlefont = f,
-  range = c(0,my_range) # You can change this range variable to change Y range on the graph to have a better visualization
+  range = c(0,my_range)
   
 )
 
