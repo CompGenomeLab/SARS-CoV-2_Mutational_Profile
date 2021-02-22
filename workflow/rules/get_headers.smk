@@ -10,7 +10,7 @@ rule get_headers:
     benchmark:
         "logs/{output_name}/get_headers.benchmark.txt",
     conda:
-        "../envs/get_headeers.yaml",
+        "../envs/get_headers.yaml",
     shell:
         """
         Rscript workflow/scripts/covid_sequence_filter.R \

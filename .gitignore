@@ -2,3 +2,4 @@ resources/genomes/*
 results/2*
 logs/*
 .snakemake/*
+workflow/scripts/.Rhistory
