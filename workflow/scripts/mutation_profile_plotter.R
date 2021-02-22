@@ -30,6 +30,8 @@ names(df) <- c("mutation","trinuc","count") #first column should have mutation t
 df <- df %>% 
   mutate(count = count / 100) ##this is for adjusting the y axis values by dividing the counts, it is optional & can be removed or edited
 
+my_range <- ceiling(max(df$count, na.rm = TRUE)) + 0.1
+
 out <- split( df , f = df$mutation )
 
 ##################### figure frames #########################
@@ -225,7 +227,7 @@ ax <- list(
   gridwidth = .5,
   title = "Normalized Mutation Counts",
   titlefont = f,
-  range = c(0,3.6) # You can change this range variable to change Y range on the graph to have a better visualization
+  range = c(0,my_range) # You can change this range variable to change Y range on the graph to have a better visualization
   
 )
 
