@@ -8,7 +8,7 @@ rule fig2bc:
         codon="resources/codon_table.txt",
         aa="resources/aminoacid_table.txt",       
     output:
-        tsv="results/{output_name}/{output_name}_{cdhit}_fig2bc.tsv",
+        tsv="results/{output_name}/{output_name}_{cdhit}_dominant_positions.tsv",
         all_aa="results/{output_name}/{output_name}_{cdhit}_all_aa.tsv",
         fig2b="results/{output_name}/{output_name}_{cdhit}_fig2b.png",
         fig2c="results/{output_name}/{output_name}_{cdhit}_fig2c.png",
