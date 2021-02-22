@@ -1,4 +1,4 @@
-resources/genomes/*
+resources/genomes/2*
 results/*
 logs/*
 .snakemake/*
