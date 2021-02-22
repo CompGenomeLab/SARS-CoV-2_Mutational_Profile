@@ -3,7 +3,7 @@ rule percentage_calc:
     input:  
         "results/{output_name}/{output_name}_{cdhit}_mutation_counts.tsv",            
     output:
-        "results/{output_name}/{output_name}_{cdhit}_percentages.txt",
+        "results/{output_name}/{output_name}_{cdhit}_mut_percentages.txt",
     log:
         "logs/{output_name}/percentage_calc_{cdhit}.log",
     benchmark:

@@ -20,6 +20,10 @@ rule all:
         expand("results/{output_name}/{output_name}_{cdhit}_fig4.png", 
                 output_name=config["output_name"], 
                 cdhit=config["cdhit"]),
+        expand("results/{output_name}/{output_name}_{cdhit}_mut_percentages.txt", 
+                output_name=config["output_name"], 
+                cdhit=config["cdhit"]),
+        
 
 include: "rules/gap_mut_calc.smk"
 include: "rules/get_headers.smk"
