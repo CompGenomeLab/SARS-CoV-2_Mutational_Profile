@@ -12,7 +12,7 @@ rule tree:
     benchmark:
         "logs/{output_name}/tree_{cdhit}.benchmark.txt", 
     conda:
-        "../envs/iqtree.yaml"
+        "../envs/tree.yaml"
     shell:
         """
         iqtree \

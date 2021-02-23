@@ -1,13 +1,12 @@
+name: fig2bc
 channels:
-  - conda-forge
-  - r
-  - bioconda/label/broken
+  - defaults
 dependencies:
-  - r-ggthemes ==3.4
-  - r-argparser ==0.4
-  - r-reshape2 ==1.4.3
-  - r-ggplot2 ==3.0.0
-  - r-stringi ==1.2.4
-  - r-rjson ==0.2.20
+  - bioconda/label/broken::r-ggthemes ==3.4
+  - conda-forge::r-argparser ==0.4
+  - conda-forge::r-reshape2 ==1.4.3
+  - conda-forge::r-ggplot2 ==3.0.0
+  - conda-forge::r-stringi ==1.2.4
+  - conda-forge::r-rjson ==0.2.20
 
 

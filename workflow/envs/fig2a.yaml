@@ -1,11 +1,11 @@
+name: fig2a
 channels:
-  - conda-forge
-  - r
+  - defaults
 dependencies:
-  - pandoc ==2.11.4
-  - r-argparser ==0.4
-  - r-webshot ==0.5.1
-  - phantomjs ==2.1.1
-  - r-plotly ==4.9.0
-  - r-dplyr ==0.8.0.1
+  - conda-forge::pandoc ==2.11.4
+  - conda-forge::r-argparser ==0.4
+  - conda-forge::r-webshot ==0.5.1
+  - conda-forge::phantomjs ==2.1.1
+  - conda-forge::r-plotly ==4.9.0
+  - r::r-dplyr ==0.8.0.1
   

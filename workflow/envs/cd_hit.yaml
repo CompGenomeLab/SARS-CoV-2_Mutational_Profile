@@ -1,6 +1,5 @@
+name: cd_hit
 channels:
   - bioconda
-  - conda-forge
-  - defaults
 dependencies:
   - cd-hit ==4.8.1

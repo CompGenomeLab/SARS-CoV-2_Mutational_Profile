@@ -1,3 +1,4 @@
+name: get_headers
 channels:
   - conda-forge
 dependencies: 

@@ -1,16 +1,15 @@
+name: fig3_4
 channels:
-  - conda-forge
-  - r
   - defaults
 dependencies: 
-  - r-patchwork ==1.0
-  - r-forcats ==0.5.1
-  - r-argparser ==0.4
-  - r-stringr ==1.4.0
-  - r-stringi ==1.4.3
-  - r-bios2cor ==1.2
-  - r-reshape2 ==1.4.3
-  - r-rjson ==0.2.20
+  - conda-forge::r-patchwork ==1.0
+  - conda-forge::r-forcats ==0.5.1
+  - conda-forge::r-argparser ==0.4
+  - r::r-stringr ==1.4.0
+  - r::r-stringi ==1.4.3
+  - r::r-bios2cor ==1.2
+  - r::r-reshape2 ==1.4.3
+  - r::r-rjson ==0.2.20
   
   
   
