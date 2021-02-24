@@ -10,11 +10,12 @@ This repository contains the codes used for processing the data and producing th
 
 - Initially, you should clone the repository and navigate into the directory: 
 
-        ```
-        git clone https://github.com/CompGenomeLab/SARS-CoV-2_Mutational_Profile.git
+    ```
+    git clone https://github.com/CompGenomeLab/SARS-CoV-2_Mutational_Profile.git
         
-        cd SARS-CoV-2_Mutational_Profile/
-        ```
+    cd SARS-CoV-2_Mutational_Profile/
+    ```
+
 
 - Next, you should create a conda environment with the defined packages. We propose 2 way to create the environment:
 
@@ -51,12 +52,36 @@ This workflow is prepared according to the [structure](https://snakemake.readthe
 - `logs/`: contains the log files of each step. This folder will automatically appear when you run the workflow.
 - `workflow/`: contains the main `Snakefile`, `envs/` where the environments are stored, `rules/` where the Snakemake rules are stored, and `scripts/` where the scripts used inside the rules are stored. 
 
-## Config file
+## Configuration file
 
+Before running the workflow, you should edit the [configuration file](https://github.com/CompGenomeLab/SARS-CoV-2_Mutational_Profile/blob/master/config/config.yaml).  
 
+- output_name: all the outputs will be stored in `results/` directory inside this folder. In addition, the <output_name> will be added to the names of the generated files.
+- fasta_file: name of the input fasta file. Ex: `"2021-02-09"`
+- msa: name of the pre-computed multiple sequence alignment.
+- fasta_folder: directory where fasta_file and msa are stored. Ex: `"resources/genomes/2021-02-09"`.
+- info_file: name of the input metadata file.
+- info folder: directory where input metadata file is stored.
+- subset: # of remaining sequences after subsampling step.
+- time_window: range of genome dates that will be used in the analyses (Any genome with a date value that is out of this range will be discarded from the analyses.). Ex: `"2019-01-01:2022-01-01"`
+- redo: repeating the building the tree (true or false). It is recommeded to set it as true in case a corrupted tree file is produced and needed to be reproduced. 
+- reference_fa: name of the reference fasta file. The directory is `resources/reference_genome/`. If you want to change the reference, you should store it in the given directory and set the name of the file here.
+- reference_gff: name of the reference gff file. The directory is `resources/reference_genome/`. If you want to change the reference, you should store it in the given directory and set the name of the file here.   
+- cdhit: sequence identity treshold set for the [cd-hit](http://weizhongli-lab.org/cd-hit/) algorithm [2]. You can provide multiple tresholds in a list, which will result in generation of downstream outputs for each treshold value of cd-hit, seperately. 
 
 ## Usage
+
+After adjusting the configuration file, you can run the workflow from `SARS-CoV-2_Mutational_Profile/` directory:
+
+```
+snakemake -pr --use-conda --cores 64 --debug-dag
+```
+
+## DAG file
+
+![A directed acyclic graph (DAG) of the analysis.](dag.svg)
 
 ## References
 
 [1] Shu, Y., & McCauley, J. (2017). GISAID: Global initiative on sharing all influenza data -from vision to reality. Euro Surveill, 22(13). doi:10.2807/1560-7917.ES.2017.22.13.30494
+[2] Fu, L., Niu, B., Zhu, Z., Wu, S., & Li, W. (2012). CD-HIT: accelerated for clustering the next-generation sequencing data. Bioinformatics, 28(23), 3150–3152. doi:10.1093/bioinformatics/bts565
