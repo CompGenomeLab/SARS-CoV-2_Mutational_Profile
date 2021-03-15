@@ -86,4 +86,5 @@ Figure 1: A directed acyclic graph (DAG) of the analysis.
 ## References
 
 [1] Shu, Y., & McCauley, J. (2017). GISAID: Global initiative on sharing all influenza data -from vision to reality. Euro Surveill, 22(13). doi:10.2807/1560-7917.ES.2017.22.13.30494
+
 [2] Fu, L., Niu, B., Zhu, Z., Wu, S., & Li, W. (2012). CD-HIT: accelerated for clustering the next-generation sequencing data. Bioinformatics, 28(23), 3150–3152. doi:10.1093/bioinformatics/bts565
